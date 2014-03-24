@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Loan Calculator</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script language="javascript" type="text/javascript" src="js/money.js"></script>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Enter Loan Data</th>
+						<td></td>
+					<th>loan balance, Cumulitive Equity, and Interst Payments </th>
+
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>Amount of the Loan</td>
+					<td>
+						<input id="amount" onchange="calculate();" /> <!-- onchage -> when you leave the input field, it runs the function --> 
+					</td>
+				</tr>
+				<tr>
+					<td>Annual Interest (%): </td>
+					<td>
+						<input id="apr" onchange="calculate();">
+					</td>
+				</tr>		
+				<tr>
+					<td>Loan time (years) </td>
+					<td>
+						<input id="years" onchange="calculate();">
+					</td>
+				</tr>
+				<tr>
+					<td>Approx Paymenets</td>
+					<td>
+						<button onclick="calculate();">Calculate</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Monthly Payment</td>
+					<td>
+						$<span class="output" id="payment"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Total Payment</td>
+					<td>
+						$<span class="output" id="total"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Total Interests</td>
+					<td>
+						$<span class="output" id="totalinterest"></span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
